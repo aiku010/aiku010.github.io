@@ -8,11 +8,12 @@ document.querySelectorAll('.card img').forEach(img => {
     lightboxImg.src = img.src;
   });
 });
+
 lightbox.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
 
-// Scroll animations (مثال بسيط)
+// Scroll animations
 const cards = document.querySelectorAll('.card');
 window.addEventListener('scroll', () => {
   const triggerBottom = window.innerHeight / 5 * 4;
@@ -21,13 +22,10 @@ window.addEventListener('scroll', () => {
     if(cardTop < triggerBottom) {
       card.style.opacity = 1;
       card.style.transform = 'translateY(0)';
-    } else {
-      card.style.opacity = 0;
-      card.style.transform = 'translateY(50px)';
     }
   });
 });
-cards.forEach(card => {
+
   card.style.transition = 'all 0.6s ease';
   card.style.opacity = 0;
   card.style.transform = 'translateY(50px)';
