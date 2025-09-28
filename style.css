@@ -90,3 +90,11 @@ footer {
   max-height: 90%;
   border-radius: 10px;
 }
+
+/* تأثير الحركة عند التمرير */
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
